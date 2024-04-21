@@ -1,0 +1,26 @@
+function  write(file,choose)
+%Mona Ragab Abdel-Moghny Ragbab_(Group1)_(1190490) 
+global table1
+while 1
+    disp('1.table1')
+    disp('2.table2')
+    disp('3.table3')
+     choose=input('enter your choice');
+    if choose==1
+        disp('1.table1')
+        file=input('enter file name: ', 's');
+        tabel=input('enter your tabel','s')
+        xlswrite(file,table);
+    elseif choose==2
+        disp('2.table2')
+        file=input('enter your filename', 's');   
+       xlswrite(file,table);
+       Header='DriverID  compensationperhour experincebnus';
+    else choose=3;
+        disp('3.table3')
+        file=input('enter your filename', 's');
+        xlswrite(file,list3);
+        break
+    end
+end
+end

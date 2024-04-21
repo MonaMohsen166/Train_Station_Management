@@ -1,0 +1,22 @@
+function table9=compute_table9(table2,table3)
+table9(:,1)=table2(:,1);
+k=1
+for i=1:length(table2)
+    for j=1:length(table3)
+        if table2(i,1)==table3(j,1)
+            y(k)=table3(j,2)
+            k=k+1
+            table9(j,2)=y
+        end
+    end
+end
+table9(:,:)=[table9(:,1) table9(j,1)];
+ask=input('do you want to display or on excel on screen E for excel or d for display?', 's');
+if ask=='E'
+    header={'DriverID trainID'};
+    xlswrite('table9.xlsx',header)
+    xlswrite('table9.xlsx',table7)
+else ask='d';
+    fprintf('DriverID  TrainID\n')
+    disp(table9)
+end
